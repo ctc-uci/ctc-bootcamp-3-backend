@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS hangman_phrases CASCADE;
+
+CREATE TABLE hangman_phrases (
+  member_id   INTEGER PRIMARY KEY REFERENCES members(id) ON DELETE CASCADE ON UPDATE CASCADE,
+  phrase      TEXT NOT NULL
+);
