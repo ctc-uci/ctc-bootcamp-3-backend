@@ -32,6 +32,7 @@ gameRouter.get('/truthslies/:memberId', async (req, res) => {
     const truths = await db.query(`SELECT truth FROM truths WHERE member_id = $1 LIMIT 2;`,  [memberId]);
     const [{lie}] = await db.query(`SELECT lie FROM lies WHERE member_id = $1 LIMIT 1;`,  [memberId]);
     res.status(200).json({
+      memberId,
       truths: truths.map(({truth}) => (truth)),
       lie
     });
