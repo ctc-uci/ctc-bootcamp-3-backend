@@ -16,5 +16,5 @@ CREATE TABLE truths (
 
 CREATE TABLE lies (
   member_id   INTEGER PRIMARY KEY REFERENCES members(id) ON DELETE CASCADE ON UPDATE CASCADE,
-  phrase      TEXT NOT NULL
+  lie         TEXT NOT NULL
 );

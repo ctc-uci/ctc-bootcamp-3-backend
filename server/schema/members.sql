@@ -2,8 +2,8 @@ DROP TABLE IF EXISTS members CASCADE;
 DROP TYPE IF EXISTS year_standing;
 DROP TYPE IF EXISTS ctc_project;
 
-CREATE TYPE year_standing AS ENUM ('1st', '2nd', '3rd', "4th");
-CREATE TYPE ctc_project AS ENUM ('AISS', 'FPH', 'S2T', "(Board)");
+CREATE TYPE year_standing AS ENUM ('1st', '2nd', '3rd', '4th');
+CREATE TYPE ctc_project AS ENUM ('AISS', 'FPH', 'S2T', '(Board)');
 
 CREATE TABLE members (
   id              SERIAL PRIMARY KEY,
